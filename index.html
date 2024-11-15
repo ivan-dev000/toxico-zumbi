@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tóxico Zumbi - Banda de Hardcore</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link para o arquivo CSS -->
+</head>
+<body>
+    
+    <!-- Cabeçalho com logo e menu -->
+    <header class="header">
+        <div class="logo-container">
+            <!-- Logo da banda com animação -->
+            <img src="img/logo-tz.png" alt="Logo da Banda Tóxico Zumbi" class="logo logo-animada">
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#musicas">Músicas</a></li>
+                <li><a href="#loja">Loja</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Banner de fundo -->
+    <section class="banner">
+        <div class="content">
+            <h2>Bem-vindo ao site da banda Tóxico Zumbi</h2>
+            <p>Hardcore que vai te deixar em estado de choque!</p>
+        </div>
+    </section>
+
+    <!-- Seção de Sobre -->
+    <section id="sobre" class="sobre">
+        <h2>Sobre a Banda</h2>
+        <p>Somos uma banda de hardcore que mistura energia pura com mensagens profundas e uma sonoridade agressiva.</p>
+    </section>
+
+    <!-- Seção de Músicas com player de áudio -->
+    <section id="musicas" class="musicas">
+        <h2>Ouça nossa música</h2>
+        
+        <!-- Elemento de áudio sem controles -->
+        <audio id="audioPlayer">
+            <source src="audio/musica-da-banda.mp3" type="audio/mp3">
+            Seu navegador não suporta o elemento de áudio.
+        </audio>
+
+        <!-- Botão para controlar a música -->
+        <button id="playPauseButton">Play</button>
+    </section>
+
+    <!-- Seção de Loja -->
+    <section id="loja" class="loja">
+        <h2>Loja de Produtos</h2>
+        <p>Confira nossos produtos exclusivos!</p>
+    </section>
+
+    <!-- Seção de Contato -->
+    <section id="contato" class="contato">
+        <h2>Contato</h2>
+        <p>Entre em contato conosco através do nosso e-mail: contato@toxicoszumbi.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Tóxico Zumbi. Todos os direitos reservados.</p>
+    </footer>
+
+    <!-- Script para o controle do áudio -->
+    <script src="js/script.js"></script>
+</body>
+</html>

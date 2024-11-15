@@ -1,0 +1,172 @@
+/* Resetando margens e paddings padrão */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do Corpo do Site */
+body {
+    background-color: #000; /* Fundo preto para o site inteiro */
+    color: #f1f1f1; /* Cor do texto em branco para contrastar com o fundo preto */
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo do Cabeçalho */
+.header {
+    background-color: #222; /* Cor do fundo do cabeçalho */
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Logo e nome da banda */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+/* Menu de navegação */
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu ul li {
+    margin: 0 15px;
+}
+
+.menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+    transition: background-color 0.3s;
+}
+
+.menu ul li a:hover {
+    background-color: #f1f1f1;
+    color: #333;
+}
+
+/* Estilo do Banner */
+.banner {
+    background-image: url('img/banner-da-banda.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #f1f1f1;
+    padding: 100px 20px;
+    height: 400px;
+    position: relative;
+    margin-top: 80px;
+}
+
+/* Camada de sobreposição no banner */
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Sobreposição preta com 50% de transparência */
+    z-index: 1;
+}
+
+/* Estilo do conteúdo do Banner */
+.banner .content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+/* Estilo das seções */
+.sobre, .musicas, .loja, .contato {
+    padding: 40px;
+    text-align: center;
+    background-color: #222; /* Cor de fundo preta para as seções */
+    margin-bottom: 20px; /* Espaço entre as seções */
+}
+
+/* Estilo do footer */
+footer {
+    background-color: #222;
+    color: #f1f1f1;
+    text-align: center;
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Animação pulsante para a logo */
+@keyframes pulsar {
+    0% {
+        transform: scale(1) rotate(0deg); /* Tamanho e rotação iniciais */
+        filter: blur(0px);
+    }
+    50% {
+        transform: scale(1.1) rotate(3deg); /* Aumenta um pouco e gira */
+        filter: blur(2px); /* Adiciona um leve desfoque */
+    }
+    100% {
+        transform: scale(1) rotate(0deg); /* Volta ao tamanho e rotação originais */
+        filter: blur(0px);
+    }
+}
+
+/* Aplica a animação à logo */
+.logo-animada {
+    width: 200px; /* Ajuste o tamanho da logo */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    animation: pulsar 2s infinite ease-in-out; /* Define a duração e repetição da animação */
+}
+
+.player-musica {
+    text-align: center;
+    margin-top: 20px;
+    color: #f1f1f1;
+}
+
+.player-musica h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+/* Estilo do botão de música */
+#playPauseButton {
+    background-color: #444; /* Cor de fundo cinza escuro */
+    color: #f1f1f1; /* Cor do texto */
+    border: 2px solid #f1f1f1; /* Borda branca */
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+#playPauseButton:hover {
+    background-color: #f1f1f1; /* Fundo branco ao passar o mouse */
+    color: #444; /* Texto escuro ao passar o mouse */
+    transform: scale(1.05); /* Aumenta levemente ao passar o mouse */
+}
